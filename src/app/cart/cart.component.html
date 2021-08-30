@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <mat-card>
+    <h1>ตะกร้าสินค้า</h1>
+    <table>
+      <tr>
+        <th>รายการสินค้า</th>
+        <th>ราคา</th>
+        <th>จำนวน</th>
+        <th>รวม</th>
+      </tr>
+      <tr *ngFor="let order of Order">
+        <td>{{order.ordername}}</td>
+        <td>{{order.price}}</td>
+        <td>{{order.count}}</td>
+        <th><button mat-icon-button><mat-icon (click) = "deleteuser(order.ordername)">delete</mat-icon></button></th>
+      </tr>
+    </table>
+    <mat-card-actions class="cardposition">
+      <button mat-raised-button color="accent" style="width: 25%;" (click)='order()'>สั่งซื้อ</button>
+    </mat-card-actions>
+  </mat-card>
+</body>
+</html>
+

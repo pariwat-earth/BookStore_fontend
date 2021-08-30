@@ -1,0 +1,63 @@
+body{
+  background: #3e5151; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3e5151, #decba4); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3e5151, #decba4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+}
+img{
+  width: 100vh;
+  position: absolute;
+  left: -1%;
+  bottom: 5%;
+}
+mat-card{
+  background-color: rgb(253, 253, 253,0.3);
+  border-radius: 5% 5% 5% 5%;
+  width: 100vh;
+  height: 90vh;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+.hearder{
+  color: white;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 4rem;
+}
+.buttonlog{
+  background-color: #3e5151;
+  color: white;
+  width: 20rem;
+  height: 5rem;
+  font-size: 3rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  margin: 3%;
+}
+.buttonlog:hover{
+  background-color: #283333;
+}
+.formcolor{
+  text-align: center;
+  opacity: 0.8;
+  margin: 5%;
+}
+mat-label{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+}
+.example-full-width {
+  width: 80%;
+}
+.linkpage{
+  color: #5D5FEF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.linkpage:hover{
+  color: #3e5151;
+}
+

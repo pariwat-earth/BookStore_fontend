@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <mat-card>
+    <h1>ลงทะเบียน</h1>
+    <form class="from" [formGroup] = "form">
+      <mat-form-field class="inputbox" appearance="fill">
+        <mat-label>Username</mat-label>
+        <input formControlName='userForm'  matInput type="text">
+      </mat-form-field>
+      <span *ngIf="form.controls['userForm'].errors?.required"style="color: red;">***กรุณากรอกUsername</span>
+      <br>
+      <mat-form-field class="inputbox" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input formControlName='passForm'  matInput type="password" value="0123456789">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="inputbox" appearance="fill">
+        <mat-label>Confirm Password</mat-label>
+        <input formControlName='conPassForm' matInput type="password" value="0123456789">
+      </mat-form-field>
+      <span *ngIf="form.controls['conPassForm'].errors?.required"style="color: red;">***ยืนยันรหัสผ่าน</span>
+      <br>
+      <mat-form-field class="inputbox" appearance="fill">
+        <mat-label>email</mat-label>
+        <input formControlName='email' matInput type="text" value="pariwat.paiwong@gmail.com">
+      </mat-form-field>
+      <span *ngIf="form.controls['email'].errors?.email"style="color: red;">***ไม่ถูกต้อง</span>
+      <span *ngIf="form.controls['email'].errors?.required"style="color: red;">***ไม่ถูกต้อง</span>
+    </form>
+    <button [disabled]='form.invalid' mat-raised-button (click)='openDialog()' color="accent">ลงทะเบียน</button>
+  </mat-card>
+</body>
+</html>

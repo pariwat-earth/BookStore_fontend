@@ -1,0 +1,12 @@
+<div class="item">
+  <img src="{{book.image}}"
+  style="width: 200px;
+  height:200px;
+  cursor: pointer;"
+  (click)='showDatabook()'
+  >
+  <!-- <p>image:{{book.image}}</p> -->
+  <p>{{book.bookname}}</p>
+  <p>price:{{book.price}}</p>
+  <button mat-raised-button color="accent" (click)='addToCart(book.bookname)'>เพิ่มในรถเข็น</button>
+</div>

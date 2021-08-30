@@ -1,0 +1,40 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar{
+  background-color: rgb(253, 253, 253,0.3);
+  color: #fff;
+  height: 15vh;
+}
+.icon1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.logo{
+  position: absolute;
+  left: 7%;
+  font-size: 4rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+button:hover{
+  color: #3e5151;
+}
+button:active{
+  color: #dbab4c;
+}
+.login{
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+.login:hover{
+  color: #decba4;
+}
+.hello{
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+

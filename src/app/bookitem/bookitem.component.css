@@ -1,0 +1,9 @@
+.item{
+  width:35vh;
+  height: 40vh;
+  margin: 2%;
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  font-weight: bold;
+}

@@ -1,0 +1,52 @@
+<mat-sidenav-container autosize>
+  <mat-sidenav mode="side" [(opened)]="opened">
+    <mat-selection-list [multiple]="false" class="listcolor">
+      <div mat-subheader class="listcolor">Menu</div>
+      <mat-nav-list>
+        <mat-list-item *ngIf="data.username == null" [routerLink]="['/Home']">
+          <mat-icon mat-list-icon>home</mat-icon>
+          <div mat-line class="listcolor">Home</div>
+        </mat-list-item>
+        <mat-list-item *ngIf="data.username != null && data.type == 'user'"
+          [routerLink]="['/Home;username={{data.username}}']">
+          <mat-icon mat-list-icon>home</mat-icon>
+          <div mat-line class="listcolor">Home</div>
+        </mat-list-item>
+        <mat-list-item *ngIf="data.username != null && data.type == 'admin'" [routerLink]="['/User']">
+          <mat-icon mat-list-icon>person</mat-icon>
+          <div mat-line class="listcolor">User</div>
+        </mat-list-item>
+      </mat-nav-list>
+      <mat-list-option *ngIf="data.username == null" [routerLink]="['/Login']">
+        <mat-icon mat-list-icon>shopping_cart</mat-icon>
+        <div mat-line class="listcolor">Cart</div>
+      </mat-list-option>
+      <mat-list-option *ngIf="data.username != null && data.type == 'user'" [routerLink]="['/Cart']">
+        <mat-icon mat-list-icon>shopping_cart</mat-icon>
+        <div mat-line class="listcolor">Cart</div>
+      </mat-list-option>
+      <mat-list-option *ngIf="data.username != null && data.type == 'admin'" [routerLink]="['/BookManage']">
+        <mat-icon mat-list-icon>book</mat-icon>
+        <div mat-line class="listcolor">Book</div>
+      </mat-list-option>
+      <mat-list-option *ngIf="data.type != 'admin'" [routerLink]="['/Aboutus']">
+        <mat-icon mat-list-icon>perm_identity</mat-icon>
+        <div mat-line class="listcolor">About us</div>
+      </mat-list-option>
+      <mat-list-option *ngIf="data.username != null && data.type == 'admin'" [routerLink]="['/Order']">
+        <mat-icon mat-list-icon>map</mat-icon>
+        <div mat-line class="listcolor">Order</div>
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-sidenav>
+  <app-header (OnTap)="navopen($event)" [NameUser]=data.username></app-header>
+  <div *ngIf='openC == true'>
+    <app-cart [Order]='order' (On_Order)="cleararray()"></app-cart>
+  </div>
+  <div class="showCart">
+    <button mat-fab color="accent"  matBadge="{{order.length}}" matBadgePosition="before"  (click) = "setshowCart()">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </div>
+</mat-sidenav-container>
+

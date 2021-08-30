@@ -1,0 +1,35 @@
+body{
+  background: #3e5151; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3e5151, #decba4); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3e5151, #decba4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+}
+mat-card{
+  background-color: rgb(253, 253, 253,0.3);
+  border-radius: 5% 5% 5% 5%;
+  width: 100vh;
+  height: 90vh;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+img{
+  width: 100vh;
+  position: absolute;
+  left: -1%;
+  bottom: 5%;
+}
+h1{
+  font-family: 'Courier New', Courier, monospace;
+}
+table{
+  width: 100%;
+  font-weight: bold;
+}
+table,tr,td,th{
+  text-align: center;
+  border: 1px solid black;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}

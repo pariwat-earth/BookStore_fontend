@@ -1,0 +1,42 @@
+.store{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: absolute;
+  left: 10%;
+}
+.bookitem{
+  margin: 2%;
+}
+.x{
+  cursor: pointer;
+  font-weight: bold;
+  color: #decba4;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+}
+.book{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2%;
+  height: 90vh;
+}
+.bookdata{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.text{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+.smalltext{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}

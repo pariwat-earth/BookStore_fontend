@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" (click)="openslidenav()">
+    <mat-icon class="icon1">menu</mat-icon>
+  </button>
+  <span class="logo">Book Store</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button *ngIf="NameUser == null">
+    <a [routerLink]="['/Login']">
+      <mat-icon matTooltip="Log In/SignIn" class="login">login</mat-icon>
+    </a>
+  </button>
+  <span *ngIf="NameUser != null" class="hello">Hello {{NameUser}}</span>
+  <mat-icon></mat-icon>
+</mat-toolbar>
+<div>
+  <app-store (On_add_Book)= 'add_bookToCart($event)'></app-store>
+</div>

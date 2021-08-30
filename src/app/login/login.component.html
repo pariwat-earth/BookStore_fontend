@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <img src="assets\images\boylibrary .png">
+    <mat-card>
+      <mat-icon></mat-icon>
+      <h1 class="hearder">Book Store</h1>
+      <form class="formcolor">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Username</mat-label>
+          <input [formControl]='userForm' matInput value="Sushi" class="inputwidth">
+          <!-- <span *ngIf="userForm.invalid">กรุณากรอกUsername</span> -->
+        </mat-form-field>
+      </form>
+      <form class="formcolor">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input type="password" [formControl]='passForm' matInput class="inputwidth">
+          <!-- <span *ngIf="passForm.invalid">กรุณากรอกpassword</span> -->
+        </mat-form-field>
+      </form>
+      <form class="formcolor">
+        <button mat-raised-button class="buttonlog" (click)='login()'>Login</button>
+      </form>
+      <form class="formcolor">
+        <button mat-button class="linkpage">Forget Password</button><br>
+        <button mat-button class="linkpage" [routerLink]="['/SignIn']">Sign In</button>
+      </form>
+    </mat-card>
+  </div>
+</body>
+
+</html>

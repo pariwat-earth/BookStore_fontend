@@ -1,0 +1,24 @@
+<div class="store" *ngIf="codebook == 0">
+  <app-bookitem class="bookitem" *ngFor="let book of books" [book]="book" (OnSelectBook)='showbook($event)'></app-bookitem>
+</div>
+
+<div *ngIf="codebook != 0" class="book">
+  <span class="x" (click)="setZero()">
+    <i class="fa fa-close" style="font-size:48px;color:#decba4" matTooltip="Close"></i>
+  </span>
+  <span class="bookdata">
+    <span class="text">{{one_book.bookname}}</span>
+    <img src="{{one_book.image}}" style="width: 40vh;">
+
+    <div class="bookdata">
+      <span class="smalltext">รายละเอียด</span>
+      <span class="smalltext">รหัสหนังสือ:{{one_book.codebook}} </span>
+      <span class="smalltext">ผู้เขียน:{{one_book.writer}}</span>
+    </div>
+  </span>
+
+  <span>
+    <span class="smalltext">ราคา{{one_book.price}}</span><br>
+    <button mat-raised-button color="accent" (click)='passbook($event)'>เพิ่มในรถเข็น</button>
+  </span>
+</div>
